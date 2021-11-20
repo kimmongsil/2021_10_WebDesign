@@ -1,0 +1,64 @@
+/* nor */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #333333;
+    background-color: #FFFFFF;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* lib */
+.cell {
+    float: left;
+}
+
+.cell-r {
+    float: right;
+}
+
+.row::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.img {
+    display: block;
+}
+
+/* style */
+/* 슬라이드 만들기 공통 */
+.slide-wrap{
+    width: 1200px;
+    height: 300px;
+    background-color: #ddd;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slide-wrap img{
+    display: block;
+}
+
+/* 슬라이드 만들기 상하 */
+
+.slide-wrap > .list{
+    position: relative;
+    transition: 0.5s;
+    top: 0px;
+    /* 1번 이미지는 top값이 0 = 300*0
+    2번 이미지는 top값이 -300 = 300*1
+    3번 이미지는 top값이 -600 = 300*2 */
+}

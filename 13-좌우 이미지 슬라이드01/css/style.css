@@ -1,0 +1,65 @@
+/* nor */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #333333;
+    background-color: #FFFFFF;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* lib */
+.cell {
+    float: left;
+}
+
+.cell-r {
+    float: right;
+}
+
+.row::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.img {
+    display: block;
+}
+
+/* style */
+/* 슬라이드 만들기 공통 */
+.slide-wrap{
+    width: 1200px;
+    height: 300px;
+    background-color: #ddd;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slide-wrap img{
+    display: block;
+}
+
+/* 슬라이드 만들기 좌우 */
+
+.slide-wrap > .list{
+    width: 3600px;
+    position: relative;
+    transition: 0.5s;
+    left: 0px;
+    /* 1번 이미지는 left값이 0 = -1200*0
+    2번 이미지는 left값이 -2400 = -1200*2
+    3번 이미지는 left값이 -3600 = -1200*3 */
+}
